@@ -8,7 +8,15 @@ function compute()
     // Check input
     if (principal.trim() == '')
     {
-        alert("Please input a valid principal amount")
+        alert("Enter a positive number")
+        document.getElementById("result").innerHTML="";
+        document.getElementById("principal").focus();
+        return
+    }
+
+    if (principal <=0)
+    {
+        alert("Enter a positive number")
         document.getElementById("result").innerHTML="";
         document.getElementById("principal").focus();
         return
